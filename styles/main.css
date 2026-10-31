@@ -90,6 +90,12 @@ section {
 		width: clamp(100px, 50%, 250px);
 		float: right;
 		margin: 0 1em .25em;
+		width: 40%;
+		min-width: 100px;
+		max-width: 250px;
+	}
+	& ul {
+		list-style-type: circle;
 	}
 }
 
@@ -177,4 +183,12 @@ footer {
 	background-color: var(--accent-color);
 	color: var(--menu-light);
 	display: none;
+	& > li a{
+		margin: 0 2px 2px;
+	}
+}
+
+.menu > li:first-child a {
+	margin-left: 0;
+	margin-right: 0;
 }
