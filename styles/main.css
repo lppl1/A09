@@ -126,3 +126,10 @@ footer {
 .large {
 	font-size: 125%;
 }
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	& li{
+		flex-basis: 20%;
+	}
+}
