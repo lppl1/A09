@@ -2,6 +2,9 @@
 :root {
 	--accent-color: #800000;  /* could also be coded #800 */
 	--gradient-color: #f6bb73;
+	--menu-light: white;
+	--menu-mid: antiquewhite;
+	--menu-dark: black;
 }
 
 /* reset */
@@ -126,10 +129,30 @@ footer {
 .large {
 	font-size: 125%;
 }
+
 .menu {
 	display: flex;
 	flex-wrap: wrap;
 	& li{
 		flex-basis: 20%;
+	}
+}
+
+.navbar{
+	background-color: var(--accent-color);
+	& a{
+		display: block;
+		padding: 1em;
+		text-decoration: none;
+		color: var(--menu-light);
+	}
+	& a:hover, & a:focus, & a.current{
+		background-color: var(--menu-mid);
+		color: var(--menu-dark);
+	}
+	& ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
 	}
 }
