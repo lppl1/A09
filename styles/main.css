@@ -135,6 +135,7 @@ footer {
 	flex-wrap: wrap;
 	& li{
 		flex-basis: 20%;
+		text-align: center;
 	}
 }
 
@@ -145,6 +146,7 @@ footer {
 		padding: 1em;
 		text-decoration: none;
 		color: var(--menu-light);
+		margin: 0 1px 2px;
 	}
 	& a:hover, & a:focus, & a.current{
 		background-color: var(--menu-mid);
@@ -155,4 +157,24 @@ footer {
 		padding: 0;
 		list-style: none;
 	}
+}
+
+/* menu item that contains submenu */
+.menu li:has(.submenu){
+	position: relative;
+	& small{
+		margin-left: .25em;
+	} 
+	&:hover > .submenu {
+		display: block;
+	}
+}
+
+.submenu {
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: var(--accent-color);
+	color: var(--menu-light);
+	display: none;
 }
